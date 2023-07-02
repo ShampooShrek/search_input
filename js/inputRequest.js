@@ -32,7 +32,7 @@ input.addEventListener("input", async (e) => {
         const livroTitle = document.createElement("h3");
         const pAutor = document.createElement("p");
         livroTitle.innerHTML = livro.title;
-        pAutor.innerHTML = `Autor: ${livro.name}`;
+        pAutor.innerHTML = `Autor: ${livro.author}`;
         divContent.appendChild(livroTitle);
         divContent.appendChild(pAutor);
 
@@ -45,6 +45,8 @@ input.addEventListener("input", async (e) => {
       if (inputList) {
         inputList.remove();
       }
+
+      await new Promise((res) => setTimeout(() => res(), 500))
 
       inputContainer.appendChild(div);
     
